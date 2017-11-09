@@ -18,3 +18,4 @@ class User: NSObject {
         self.name = name
     }
 }
+

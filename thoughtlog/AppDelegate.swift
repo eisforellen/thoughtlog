@@ -12,10 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let auth = AuthenticationManager()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        auth.authenticateUser() { [weak self] in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let logVC = storyboard.instantiateViewController(withIdentifier: "tabBarController")
+            self?.window?.rootViewController = logVC
+            self?.window?.makeKeyAndVisible()
+        }
         return true
     }
 
@@ -30,7 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let protectedVC = storyboard.instantiateViewController(withIdentifier: "protected")
+        window?.rootViewController = protectedVC
+        window?.makeKeyAndVisible()
+        auth.authenticateUser() { [weak self] in
+            let logVC = storyboard.instantiateViewController(withIdentifier: "tabBarController")
+            self?.window?.rootViewController = logVC
+            self?.window?.makeKeyAndVisible()
+        }
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
