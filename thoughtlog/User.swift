@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User: NSObject {
+class User {
     static let sharedInstance = User(name: "Bob")
     
     let name: String
