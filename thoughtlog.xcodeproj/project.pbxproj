@@ -16,8 +16,6 @@
 		429E55D91FB0EB87002B88F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E55D71FB0EB87002B88F5 /* User.swift */; };
 		429E55DA1FB0EB87002B88F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E55D71FB0EB87002B88F5 /* User.swift */; };
 		429E55E41FB23906002B88F5 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E55E31FB23906002B88F5 /* AuthenticationManager.swift */; };
-		429E55E51FB23906002B88F5 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E55E31FB23906002B88F5 /* AuthenticationManager.swift */; };
-		429E55E61FB23906002B88F5 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E55E31FB23906002B88F5 /* AuthenticationManager.swift */; };
 		42B0F9AF1FB0B4C00099BF03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B0F9AE1FB0B4C00099BF03 /* AppDelegate.swift */; };
 		42B0F9B11FB0B4C00099BF03 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B0F9B01FB0B4C00099BF03 /* NewEntryViewController.swift */; };
 		42B0F9B41FB0B4C00099BF03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B0F9B21FB0B4C00099BF03 /* Main.storyboard */; };
@@ -147,7 +145,6 @@
 		42B0F9A21FB0B4C00099BF03 = {
 			isa = PBXGroup;
 			children = (
-				429E55E31FB23906002B88F5 /* AuthenticationManager.swift */,
 				42B0F9AD1FB0B4C00099BF03 /* thoughtlog */,
 				42B0F9C21FB0B4C00099BF03 /* thoughtlogTests */,
 				42B0F9CD1FB0B4C00099BF03 /* thoughtlogUITests */,
@@ -170,6 +167,7 @@
 		42B0F9AD1FB0B4C00099BF03 /* thoughtlog */ = {
 			isa = PBXGroup;
 			children = (
+				429E55E31FB23906002B88F5 /* AuthenticationManager.swift */,
 				429E55E11FB2364F002B88F5 /* Resources */,
 				429E55E01FB23631002B88F5 /* View Controllers */,
 				429E55DB1FB0FF27002B88F5 /* Models */,
@@ -530,7 +528,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				429E55D91FB0EB87002B88F5 /* User.swift in Sources */,
-				429E55E51FB23906002B88F5 /* AuthenticationManager.swift in Sources */,
 				42B0F9C41FB0B4C00099BF03 /* thoughtlogTests.swift in Sources */,
 				421197081FB4B13E00B520F6 /* ProtectedViewController.swift in Sources */,
 				42B0F9E21FB0E22C0099BF03 /* LogEntry.swift in Sources */,
@@ -542,7 +539,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				429E55DA1FB0EB87002B88F5 /* User.swift in Sources */,
-				429E55E61FB23906002B88F5 /* AuthenticationManager.swift in Sources */,
 				42B0F9CF1FB0B4C00099BF03 /* thoughtlogUITests.swift in Sources */,
 				421197091FB4B13E00B520F6 /* ProtectedViewController.swift in Sources */,
 				42B0F9E31FB0E22C0099BF03 /* LogEntry.swift in Sources */,
