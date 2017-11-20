@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LogEntry: NSObject {
+class LogEntry {
     var entryText: String
     let dateCreated = Date()
     
