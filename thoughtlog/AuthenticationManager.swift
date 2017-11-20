@@ -11,18 +11,17 @@ import LocalAuthentication
 class AuthenticationManager {
     let context = LAContext()
     
-    func canEvaluatedPolicy() -> Bool {
+    func canEvaluatePolicy() -> Bool {
         return context.canEvaluatePolicy(.deviceOwnerAuthentication, error: nil)
     }
     
     func authenticateUser(completion: @escaping () -> Void) {
-        guard canEvaluatedPolicy() else { return }
+        // TODO: Handle the case where the device cannot authenticate
+        guard canEvaluatePolicy() else { return }
         
         context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Verify your identity to access your log") { (success, evaluateError) in
             if success {
-                DispatchQueue.main.async {
-                    completion()
-                }
+                DispatchQueue.main.async(execute: completion)
             } else {
                 // TODO: Handle error cases
             }
